@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>css_138:板块练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .leftfix {
+            float: left;
+        }
+        .rightfix {
+            float: right
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .container {
+            width: 960px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .logo,.banner2 {
+            width: 200px;
+        }
+        .banner1 {
+            width: 540px;
+            margin: 0 10px;
+        }
+        .logo,.banner1,.banner2 {
+            height: 80px;
+            background-color: #ccc;
+            line-height: 80px;
+        }
+        .menu {
+            width: 960px;
+            height: 30px;
+            background-color: #ccc;
+            margin: 10px 0;
+        }
+        .left {
+            width: 760px;
+        }
+        .right {
+            width: 200px;
+        }
+        .l1,.l2 {
+            width: 368px;
+            height: 198px;
+            border: 1px solid black;
+            line-height: 198px;
+        }
+        .l2 {
+            margin: 0 10px;
+        }
+        .l3,.l4,.l5,.l6 {
+            width: 178px;
+            height: 198px;
+            border: 1px solid black;
+            line-height: 198px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        .l7,.l8,.l9 {
+            width: 198px;
+            height: 128px;
+            border: 1px solid black;
+            line-height: 128px;
+        }
+        .l8 {
+            margin: 10px 0;
+        }
+        .foot {
+            width: 960px;
+            height: 60px;
+            background-color: #ccc;
+            margin-top: 10px;
+            line-height: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 上半 -->
+         <div class="top clearfix">
+            <div class="logo leftfix">logo</div>
+            <div class="banner1 leftfix">banner1</div>
+            <div class="banner2 leftfix">banner2</div>
+         </div>
+        <!-- 菜单 -->
+         <div class="menu">菜单</div>
+         <!-- 中间部分 -->
+          <div class="content clearfix">
+            <div class="left leftfix">
+                <div class="l1 leftfix">栏目1</div>
+                <div class="l2 leftfix">栏目2</div>
+                <div class="l3 leftfix">栏目3</div>
+                <div class="l4 leftfix">栏目4</div>
+                <div class="l5 leftfix">栏目5</div>
+                <div class="l6 leftfix">栏目6</div>
+            </div>
+            <div class="right rightfix">
+                <div class="l7 rightfix">栏目7</div>
+                <div class="l8 rightfix">栏目8</div>
+                <div class="l9 rightfix">栏目9</div>
+            </div>
+          </div>
+          <!-- 下半 -->
+           <div class="foot">页脚</div>
+    </div>
+</body>
+</html>
