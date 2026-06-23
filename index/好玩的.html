@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>好玩的</title>
+    <style>
+        .box1 {
+            width: 500px;
+            height: 400px;
+            font-size: 50px;
+            position: relative;
+            color: black;
+            text-align: center;
+        }        
+        .box2 {
+            width: 500px;
+            height: 400px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            opacity: 0;
+        }
+        .box2:hover {
+            opacity: 1;
+            transform: scale(1.1) rotate(5deg);
+            transition: 0.3s 1s;
+        }
+        .img {
+            transition: ease-in;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">别碰我不然我会生气
+        <img src="好玩的1.jpg" alt="calm" width=500px>
+    </div>
+    <div class="box2">
+        <img src="好玩的2.jpg" alt="angry" width="500px">
+    </div>
+</body>
+</html>
